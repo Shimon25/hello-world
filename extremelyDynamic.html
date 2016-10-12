@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <input id="fName" type="text"/> First name <br>
+    <input id="lName" type="text"/> Last name <br>
+    <button id="go">Go!</button>     <button id="clear">Clear</button><br>
+    <span id="congratulation"></span>
+</div>
+
+<script>
+    var inp1 =  document.getElementById("fName");
+    var inp2 = document.getElementById("lName");
+    var cong = document.getElementById("congratulation");
+
+            document.getElementById("go").onclick = function () {
+                var str = "Congratulation, " + inp1.value + " " + inp2.value + "!";
+                cong.innerText = str;
+    }
+
+    document.getElementById("clear").onclick = function () {
+        inp1.value = " ";
+        inp2 .value= "";
+        var str = "Congratulation, Cleared!" ;
+        cong.innerText = str;
+    }
+</script>
+</body>
+</html>
