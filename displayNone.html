@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #first{
+            width: 300px;
+            height: 300px;
+            background-color: #9a8f09;
+        }
+    </style>
+</head>
+<body>
+<div id="first"></div>
+<Button id="second">Push!</Button>
+
+
+<script>
+    var sq = document.getElementById("first");
+    sq.onclick = function () {
+        sq.style.display = "none";
+    }
+
+   var but =  document.getElementById("second")
+    but.onclick = function () {
+        sq.style.display = "block";
+        but.style.display = "none";
+    }
+
+
+</script>
+</body>
+</html>
