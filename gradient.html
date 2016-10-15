@@ -5,11 +5,18 @@
     <title>Title</title>
     <style>
         .but{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            height: 300px;
+            width: 300px;
+
+
             font-family: Arial;
             font-size: 70px;
             color: #006600;
             padding: 50px;
-            border: hidden;
+            border: 1px solid transparent;
             
             background: linear-gradient(to  top , #000000, #990000, #000000, #990000, #000000);
             border-radius:  50px;
@@ -17,9 +24,20 @@
         .but:hover{ background: linear-gradient(to  right , #000000, #990000, #000000, #990000, #000000);
 
         }
+
+        .bordg{
+            position: absolute;
+            top: 90px;
+            left: 90px;
+            height: 320px;
+            width: 320px;
+            background: linear-gradient(#006600, #ffff00, #006600);
+            border-radius: 50px;
+        }
     </style>
 </head>
 <body>
+<div class="bordg"></div>
 <button class="but">That's button</button>
 
 </body>
