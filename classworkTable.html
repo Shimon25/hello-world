@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: 'YourFontName'; /*a name to be used later*/
+            src: url('http://example.com/tangerine.ttf'); /*URL to font*/
+        }
+        body{
+            background-color: antiquewhite;
+        }
+        .conteiner{
+            font-family: 'YourFontName';
+            width: 60vw;
+            height: 40vh;
+            margin: auto ;
+            margin-top: 20vh;
+
+        }
+        table{
+          width: 100%;
+
+        border-collapse:  collapse;
+            text-align:  center ;
+            background-color: lightgreen;
+        }
+
+        table tr:nth-child(odd){
+            background-color: antiquewhite;
+        }
+
+
+
+        tr{
+            height: 40px;
+                    }
+        td{
+            border: 1px solid black;
+        }
+        tfoot{
+            text-align: right;
+            font-size: 17px;
+        }
+        .ine{
+
+            overflow: scroll;
+            height: 40vh;
+
+        }
+    </style>
+
+</head>
+<body>
+<div class="conteiner">
+<table>
+    <caption>Name<br/>
+        <br/>
+        <br/>
+        <br/></caption>
+
+
+
+    <tr>
+        <th>Model</th>
+        <th>Photo</th>
+        <th>Price</th>
+    </tr>
+</table>
+
+        <div class="ine">
+            <table>
+    <tr>
+        <td>audi</td>
+        <td>Rid</td>
+        <td>14000</td>
+    </tr>
+    <tr>
+        <td>vaz</td>
+        <td>11111</td>
+        <td>18000</td>
+    </tr>
+    <tr>
+        <td>bmw</td>
+        <td>22222</td>
+        <td>12000</td>
+    </tr>
+    <tr>
+        <td>Bugatti</td>
+        <td>3333</td>
+        <td>120000</td>
+    </tr>
+    <tr>
+        <td>Bugatti</td>
+        <td>3333</td>
+        <td>120000</td>
+    </tr>
+    <tr>
+        <td>Bugatti</td>
+        <td>3333</td>
+        <td>120000</td>
+    </tr>
+    <tr>
+        <td>Bugatti</td>
+        <td>3333</td>
+        <td>120000</td>
+    </tr>
+
+    </tbody>
+
+    <tfoot>
+    <td colspan="3" > Service not iclusive</td>
+    </tfoot>
+</table>
+    </div>
+</div>
+
+</body>
+</html>
