@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 50vw;
+            position: absolute;
+            left: 25vw;
+            top: 30vh;
+            font-family: Arial;
+
+        }
+td{
+    padding:  30px;
+}
+        table td:nth-child(2){
+            width: 30px;
+            padding:  30px;
+
+        }
+    </style>
+
+</head>
+<body>
+<script>
+function Car(model, color, engine, owner) {
+    this.model = model;
+    this.color = color;
+    this.engine = engine;
+    this.owner = owner;
+}
+
+function Owner(fName, lName) {
+    this.fName = fName;
+    this.lName = lName;
+}
+
+    var pers = new Car("Zhiguli", "#ffff00", 1,3, new Owner("Vasia" , "Pupkin"));
+
+//var car = [];
+//car[0] = new Car("Zhiguli", "#ffff00", 1.3, new Owner("Vasia" , "Pupkin"));
+//car[1] = new Car("VAZ", "#ff0000", 1.3, new Owner("Petya" , "Tushkin"));
+//car[2] = new Car("AUDI", "#ffffff", 1.3, new Owner("Grisha" , "Vorobyov"));
+//car[3] = new Car("LADA", "#00ff00", 1.3, new Owner("Lesya" , "Lysaya"));
+
+var resp = '[{"model":"Zhiguli","color":"#ffff00","engine":1.3,"owner":{"fName":"Vasia","lName":"Pupkin"}},{"model":"VAZ","color":"#ff0000","engine":1.3,"owner":{"fName":"Petya","lName":"Tushkin"}},{"model":"AUDI","color":"#0000ff","engine":1.3,"owner":{"fName":"Grisha","lName":"Vorobyov"}},{"model":"LADA","color":"#00ff00","engine":1.3,"owner":{"fName":"Lesya","lName":"Lysaya"}}]';
+ var car = JSON.parse(resp);
+
+    console.log(JSON.stringify(car));
+
+    var tbl = document.createElement("table");
+    for(var i = 0; i < car.length; i++){
+        var row = tbl.insertRow();
+        row.insertCell().innerText = car[i].model;
+        row.insertCell().style.backgroundColor = car[i].color;
+        row.insertCell().innerText = car[i].engine;
+        row.insertCell().innerText = car[i].owner.fName;
+        row.insertCell().innerText = car[i].owner.lName;
+    }
+
+    document.body.appendChild(tbl);
+
+C:\Users\Gran1\PhpstormProjects\untitled\black square.html
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    var pers = {
+        id: 336533777,
+        fName: "David",
+        lName: "Kohen",
+        age: 27,
+
+        fullName: function () {
+            return this.fName + " " + this.lName + " Id:" + this.id;
+        }
+    };
+    pers.wife = "Sarah";
+    delete pers.age;
+
+    alert(pers.fullName());
+
+
+    var a = true;
+    var str = a ? "fName" : "lName";
+    console.log(pers[str]);
+
+    for(var key in pers){
+        alert(key + ":" + pers[key]);
+    }
+
+</script>
+</body>
+</html>
