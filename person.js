@@ -17,10 +17,14 @@ function Person(n, a, m) {
         return married;
     }
 
+    function setN(n) {
+        name = n;
+    }
+
        return {
            getName : getN,
            getAge : getA,
            getMarried : getM,
-
+    setName : setN
        }
 }
