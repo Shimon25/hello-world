@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="person.js"></script>
+    <script src="Util.js"></script>
 </head>
 <body>
 
@@ -12,7 +13,35 @@
     var p2 = Person("Masha", 88, false);
 
     p2.setName("aaaa");
-    console.log(p2.getName());
+   // console.log(p1);
+
+    var arr = [];
+  //  var ppp = Person("")
+
+    for(var i = 0; i < 20; i++) {
+//        console.log(Util.randomInt(1000));
+//        console.log(Person.GetRendomPerson().toString());
+        arr.push(Person.GetRendomPerson());
+      //  console.log(arr[i]);
+    }
+
+//    arr.sort(function (e1,e2) {
+//        return e1.getName() - e2.getName();
+//    });
+
+    //arr.sort(Person.sortBy("age"));
+
+//    for(var i = 0; i < 20; i++)
+//    {
+//        console.log(arr[i].toString());
+//    }
+
+
+    arr.sort(Person.filter(50,80));
+    for(var i = 0; i < arr.length; i++)
+    {
+        console.log(arr[i].toString());
+    }
 </script>
 
 </body>
