@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Util.js"></script>
+    <script src="Car.js"></script>
+</head>
+<body>
+
+<script>
+
+var arr = [];
+for(var i = 0; i < 20; i++) {
+ arr.push(Car.getRandomCar());
+}
+
+arr.sort(Car.sortBy("engine"));
+
+var arr1 = arr.filter(Car.filter("engine", 100, 4000));
+
+for(var i = 0; i < arr1.length; i++) {
+console.log(arr1[i].toString());
+}
+
+
+</script>
+</body>
+</html>
