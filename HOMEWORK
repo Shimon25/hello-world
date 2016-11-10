@@ -1,7 +1,7 @@
 Adress
 
-country
-city
-street
-home > 0
-appt > 0
+country    g
+city       g
+street     g  s
+home > 0   g  s
+appt > 0   g  s
