@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="CarFunction.js"></script>
+    <script src="Book.js"></script>
+</head>
+<body>
+<script>
+
+    var car1 = new Car("VAZ", 1991, 2.1);
+    car1.name = "aaa";
+    car1.model ="Tavria";
+//    console.log(car1.getAll());
+
+    var gth = function () {
+        return "Go to hell";
+    }
+     car1.getAll = gth;
+//    console.log(car1.getAll());
+
+
+    var book = Book("War and Peace", "Tolstoy", 1001);
+
+     book.value("year", 1980);
+//    console.log( book.value("year"));
+    console.log( book.toString());
+</script>
+
+</body>
+</html>
