@@ -1,7 +1,3 @@
-Adress
+car
 
-country    g
-city       g
-street     g  s
-home > 0   g  s
-appt > 0   g  s
+ONCLICK -> WIN
