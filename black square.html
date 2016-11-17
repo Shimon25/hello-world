@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .black{
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<div id="malevich" class="black"  title="Malevich smokes at side"></div>
+
+<script>
+    var square = document.getElementById("malevich");
+    square.onmouseover = function () {
+        this.style.backgroundColor = "yellow";
+    }
+    square.onmouseout = function () {
+        this.style.backgroundColor = "red";
+    }
+</script>
+</body>
+</html>

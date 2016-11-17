@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #first{
+            position: absolute;
+            top: 138px;
+            left: 65px;
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+
+        }
+    </style>
+</head>
+<body>
+<div id="first"></div>
+<button id="but">PUSH</button>
+
+<script>
+  document.getElementById("but").onclick = function () {
+      var gbcr =  document.getElementById("first").getBoundingClientRect();
+      console.log(gbcr.top);
+      console.log(gbcr.left);
+  }
+</script>
+
+</body>
+</html>

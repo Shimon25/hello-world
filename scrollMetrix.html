@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #first{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            font-size: 20px
+
+        }
+    </style>
+</head>
+<body>
+<div id="first">
+<p>1. Very long, but very intresting and important content</p>
+<p>2. Very long, but very intresting and important content</p>
+<p>3. Very long, but very intresting and important content</p>
+<p>4. Very long, but very intresting and important content</p>
+<p>5. Very long, but very intresting and important content</p>
+<p>6. Very long, but very intresting and important content</p>
+<p>7. Very long, but very intresting and important content</p>
+<p>8. Very long, but very intresting and important content</p>
+<p>9. Very long, but very intresting and important content</p>
+<p>10. Very long, but very intresting and important content</p>
+<p>11. Very long, but very intresting and important content</p>
+<p>12. Very long, but very intresting and important content</p>
+<p>13. Very long, but very intresting and important content</p>
+</div>
+<button id="but">10px UP</button>
+<button id="left">10px left</button>
+<button id="right">10px right</button>
+
+<script>
+    var d =document.getElementById("first");
+    console.log(d.scrollHeight);
+       console.log(d.scrollWidth);
+    console.log(d.scrollTop);
+    console.log(d.scrollLeft);
+
+    var btn = document.getElementById("but");
+    btn.onclick = function () {
+     d.scrollTop = d.scrollTop +10;
+    };
+
+
+
+    document.getElementById("left").onclick = function () {
+        d.scrollLeft = d.scrollLeft - 10;
+    };
+    document.getElementById("right").onclick = function () {
+        d.scrollLeft = d.scrollLeft + 10;
+    };
+
+    document.getElementById("first").onclick = function () {
+        d.scrollTop = d.scrollTop -10;
+    };
+</script>
+</body>
+</html>
