@@ -1,3 +1,7 @@
-car
+div
 
-ONCLICK -> WIN
+inside it 4 divs
+
+overflow hidden
+
+1 div 10 scrolltop scrollLeft
