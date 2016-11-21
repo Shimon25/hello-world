@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jsOpaFirst.css"/>
+    <style>
+    .page{
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        font-size: 75px;
+        text-align: center;
+    }
+
+
+    </style>
+</head>
+<body>
+<div id="navbar">
+    <button id="butRed" class="but r">Red</button>
+    <button id="butGreen" class="but g">Green</button>
+    <button id="butBlue" class="but b">Blue</button>
+    <button id="butYellow" class="but y">Yellow</button>
+</div>
+
+<div id="red" class="page r">Red Page</div>
+<div id="green" class="page g">Green Page</div>
+<div id="blue" class="page b">Blue Page</div>
+<div id="yellow" class="page y">Yellow Page</div>
+
+
+<script>
+ var bodyHeight = document.body.offsetHeight;
+ var navbarHeight = document.getElementById("navbar").offsetHeight;
+ var pages = document.getElementsByClassName("page");
+
+ for(var i=0; i<pages.length; i++){
+     pages[i].style.top = navbarHeight+"px";
+     pages[i].style.height = (bodyHeight-navbarHeight)+"px";
+ }
+
+ function  zIndexToOne() {
+     for(var i=0; i<pages.length; i++){
+         pages[i].style.zIndex = 1;
+     }
+ }
+
+ document.getElementById("butRed").onclick = function () {
+     zIndexToOne();
+     document.getElementById("red").style.zIndex = 10;
+ }
+ document.getElementById("butGreen").onclick = function () {
+     zIndexToOne();
+     document.getElementById("green").style.zIndex = 10;
+ }
+ document.getElementById("butBlue").onclick = function () {
+     zIndexToOne();
+     document.getElementById("blue").style.zIndex = 10;
+ }
+ document.getElementById("butYellow").onclick = function () {
+     zIndexToOne();
+     document.getElementById("yellow").style.zIndex = 10;
+ }
+
+    console.log(bodyHeight);
+    console.log(navbarHeight);
+</script>
+</body>
+</html>

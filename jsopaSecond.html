@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jsOpaFirst.css"/>
+    <style>
+        .page{
+            position: absolute;
+            width: 100vw;
+            left: 0;
+            font-size: 75px;
+            text-align: center;
+        }
+        #container{
+            position: absolute;
+            overflow: hidden;
+            left: 0;
+            width: 100vw;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="navbar">
+    <button id="butRed" class="but r">Red</button>
+    <button id="butGreen" class="but g">Green</button>
+    <button id="butBlue" class="but b">Blue</button>
+    <button id="butYellow" class="but y">Yellow</button>
+</div>
+<div id="container">
+<div id="red" class="page r firsr">Red Page</div>
+<div id="green" class="page g second">Green Page</div>
+<div id="blue" class="page b third">Blue Page</div>
+<div id="yellow" class="page y fourth">Yellow Page</div>
+</div>
+
+<script>
+    var cont = document.getElementById("container");
+
+    var bodyHeight = document.body.offsetHeight;
+    var navbarHeight = document.getElementById("navbar").offsetHeight;
+    document.getElementById("container").style.top = navbarHeight + "px";
+    document.getElementById("container").style.height = (bodyHeight-navbarHeight) + "px";
+    var pages = document.getElementsByClassName("page");
+
+    for(var i=0; i<pages.length; i++){
+        pages[i].style.top = navbarHeight+"px";
+        pages[i].style.height = (bodyHeight-navbarHeight)+"px";
+    }
+
+    pages[0].style.top = 0;
+    pages[0].style.left = 0;
+
+    pages[1].style.top = 0;
+    pages[1].style.left = '100vw';
+
+    pages[2].style.top = (bodyHeight-navbarHeight)+"px";
+    pages[2].style.left = 0;
+
+    pages[3].style.top = (bodyHeight-navbarHeight)+"px";
+    pages[3].style.left = '100vw';
+
+    var bodywidth = document.body.offsetWidth;
+    document.getElementById("butYellow").onclick = function () {
+        cont.scrollTop = bodyHeight-navbarHeight;
+        cont.scrollLeft = bodywidth;
+    };
+
+    document.getElementById("butGreen").onclick = function () {
+        cont.scrollTop = 0;
+        cont.scrollLeft = bodywidth;
+    };
+
+    document.getElementById("butBlue").onclick = function () {
+        cont.scrollTop = bodyHeight-navbarHeight;
+        cont.scrollLeft = 0;
+    };
+
+    document.getElementById("butRed").onclick = function () {
+        cont.scrollTop = 0;
+        cont.scrollLeft = 0;
+    };
+
+</script>
+</body>
+</html>
