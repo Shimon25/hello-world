@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #first{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="first"></div>
+<script>
+    var tAnimation = 5000;
+    var topN = 600;
+    var leftN = 800;
+
+    var elem = document.getElementById("first");
+
+    var freq = 100;
+    var dt = 1000/freq;
+
+    var top0 = elem.offsetTop;
+    var left0 = elem.offsetLeft;
+
+    var tCurr = 0;
+    var thread = setInterval(function () {
+            tCurr = tCurr+dt;
+        if(tCurr > tAnimation) clearInterval(thread);
+        elem.style.left = (left0 + (leftN - left0)*tCurr/tAnimation) + "px";
+        elem.style.top = (top0 + (topN - top0)*tCurr/tAnimation) + "px";
+    },dt);
+
+</script>
+</body>
+</html>

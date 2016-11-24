@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="time" ></p>
+
+<script>
+    var holder = document.getElementById("time");
+
+
+    function setTime() {
+        var date = new Date();
+        holder.innerText = addZero(date.getHours()) + ": "+ addZero(date.getMinutes())  + ": "+ addZero(date.getSeconds());
+    }
+
+
+
+    setInterval(setTime,1000);
+
+    function addZero(num) { return num < 10 ? "0" + num : num;    }
+
+
+
+</script>
+
+</body>
+</html>
