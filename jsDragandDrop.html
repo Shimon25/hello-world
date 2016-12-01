@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .sq{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+        .r{
+            background-color: red;
+            top: 0;
+            left: 0;
+        }
+        .g{
+            background-color: green;
+            top: 200px;
+            left: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="first" class="sq r"></div>
+<div id="second" class="sq g"></div>
+
+<script>
+        makeDraggable(document.getElementById("first"));
+        makeDraggable(document.getElementById("second"));
+
+    function makeDraggable(elem) {
+        elem.onmousedown = function (e) {
+            var l0 = elem.offsetLeft;
+            var t0 = elem.offsetTop;
+
+            var x0 = e.clientX;
+            var y0 = e.clientY;
+
+            document.addEventListener("mousemove", move);
+            document.addEventListener("mouseup", up);
+
+            function move(e) {
+                var x = e.clientX;
+                var y = e.clientY;
+
+                elem.style.left = l0 + (x - x0) + "px";
+                elem.style.top = t0 + (y - y0) + "px";
+            }
+
+           function up() {
+            document.removeEventListener("mousemove", move);
+               document.removeEventListener("mouseup", up);
+           }
+        }
+    }
+</script>
+
+</body>
+</html>

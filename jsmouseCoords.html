@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #first{
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            top:0px;
+            left: 0px;
+            background-color: yellow;
+        }
+        #second{
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            top:100px;
+            left: 700px;
+            background-color: red;
+        }
+        #third{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            top:200px;
+            left: -300px;
+            background-color: green;
+        }
+    </style>
+
+    <script src="jscircle.js"></script>
+</head>
+<body>
+
+
+<div id="first">
+    <div id="second">
+        <div id="third"> </div>
+    </div>
+</div>
+
+
+
+<script>
+var r = document.getElementById("second");
+
+document.getElementById("first").onclick = function () {
+    if(document.getElementById("first").style.backgroundColor != "blue"){
+    document.getElementById("first").style.backgroundColor = "blue";}
+else
+{  document.getElementById("first").style.backgroundColor = "yellow";}
+}
+
+
+r.onclick = function () {event.stopPropagation()};
+
+
+var sq = new Square(3);
+
+console.log(Square.area(10));
+console.log(Square.area(5));
+
+    var c = Circle(5);
+
+
+    console.log(Circle.area(1));
+console.log(Circle.area(2));
+</script>
+<!--//    document.body.addEventListener("click" , function () {-->
+<!--//        alert("hello");-->
+<!--//    });-->
+<!--//-->
+<!--//    document.body.addEventListener("click", function (e) {-->
+<!--//        console.log(e.clientX + "; " + e.clientY);-->
+<!--//    });-->
+
+
+
+
+
+
+
+</body>
+</html>
