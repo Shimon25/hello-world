@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+<script>
+    function Car(VIN, model,year, engine) {
+        this.VIN = VIN;
+        this.model = model;
+        this.year = year;
+        this.engine = engine;
+    }
+
+    var garage = [];
+    garage.push(new Car("1234", "Zgiguli", 1983, 1.3));
+    garage.push(new Car("122234", "Zgigu3434li", 1983, 1.3));
+    garage.push(new Car("3333", "Zgigu345li", 1963, 1.3));
+    garage.push(new Car("4444", "Zgiguerli", 1985, 1.3));
+    garage.push(new Car("1235554", "Zgi544guli", 1923, 1.3));
+
+    var tbl = $("<table><table/>");
+    var row = $("<tr><tr/>");
+    for(var key in garage[0]){
+        var cell = $("<td><td/>");
+        cell.text(key);
+        row.append(cell);
+    }
+    tbl.append(row);
+
+    for(var i in garage) {
+        row = $("<tr><tr/>");
+        for (var key in garage[i]) {
+            cell = $("<td><td/>");
+            cell.text(garage[i][key]);
+            row.append(cell);
+        }
+        tbl.append(row);
+    }
+    $("body").append(tbl);
+</script>
+</body>
+</html>

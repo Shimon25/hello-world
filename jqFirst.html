@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        select{
+            font-size: 50px;
+        }
+    </style>
+    <script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<button id="but">PUSH!</button>
+<script>
+    var names = ["Sasha", "masha", "Vasia", "Natasha"];
+
+
+    var sel = $("<select><select/>");
+    $("body").append(sel);
+
+    for(var i=0; i<names.length; i++){
+        var opt = $("<option></option>");
+        opt.text(names[i]);
+        sel.append(opt);
+    }
+
+    $("#but").on("click", function () {
+        var options = sel.find("option");
+        for(var i=0; i<options.length; i++){
+if(options[i].selected)
+                console.log(options[i].text);
+return;
+        }
+    })
+</script>
+</body>
+</html>
