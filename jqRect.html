@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <style>
+        #first{
+            width: 200px;;
+            height: 200px;
+
+        }
+    </style>
+</head>
+<body>
+<div id="first"></div>
+<button id="but">Button</button>
+<script>
+    function Rect(aa,bb) {
+        var rect = {
+            a : aa,
+            b : bb
+        };
+
+        return{
+            side : function (name, value) {
+                if(value == undefined){
+                    return rect[name];
+                } else{
+                    rect[name] = value;
+                }
+            }
+
+
+
+//
+//            getA: function () {return a },
+//            getB: function () {return b },
+//            setA: function (x) {a=x },
+//            setB: function (x) {b=x }
+
+        }
+    }
+
+    var r = Rect(3,5);
+
+   // r.side("b", 12);
+    console.log(r.side("b"));
+
+    var d = $("#but");
+    var sq = $("#first");
+//    d.on("click", function () {if(sq.style.backg == "red"){
+//       sq.style.backgroundColor = "blue";
+//    }else{
+//       sq.style.backgroundColor = "red";
+//    }});
+
+    sq.css("backgroundColor", "red");
+
+    d.on("click", function () {sq.css("backgroundColor", "green")});
+
+</script>
+
+</body>
+</html>

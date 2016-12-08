@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <style>
+        .navBar{
+            position: absolute;
+            font-size: 0;
+        }
+        .but{
+            border: hidden;
+        }
+        .sq{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+        }
+        .red{
+            top: 100px;
+            left: 0;
+            background-color: red;
+        }
+        .green{
+           top: 300px;
+            left: 0;
+            background-color: green;
+        }
+        .yellow{
+            top: 500px;
+            left: 0;
+            background-color: yellow;
+        }
+        .border{
+            border: 10px solid blue;
+        }
+    </style>
+</head>
+<body>
+<div id="nb" class="navBar">
+    <button class="but" vasia="r">red</button>
+    <button class="but" vasia="g">green</button>
+    <button class="but" vasia="y">yellow</button>
+</div>
+<div id="r" class="sq red"></div>
+<div id="g" class="sq green"></div>
+<div id="y" class="sq yellow"></div>
+
+<script>
+    $("#nb").on("click", function (e) {
+         $("#" + $(e.target).attr("vasia")).toggleClass("border");
+    });
+
+</script>
+</body>
+</html>
