@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <style>
+        #s li{
+            margin: auto;
+            list-style-type: none;
+            font-family: Arial;
+            font-size: 15px;
+            font-style: italic;
+            padding: 1px;
+            border: 0.3px solid lightseagreen;
+            text-align: center;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+<ul id="s">
+    <li>Zhmerinka</li>
+    <li>Beerdishev</li>
+    <li>Odessa</li>
+    <li>Zaporozhie</li>
+    <li>Vladimir</li>
+    <li>Moscow</li>
+    <li>Shanghai</li>
+</ul>
+
+<script>
+    $("#s").sortable();
+</script>
+
+</body>
+</html>

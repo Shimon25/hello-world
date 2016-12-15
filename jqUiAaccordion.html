@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <style>
+        .acc{
+            width: 50vw;
+            font-family: Arial;
+            font-size: 4vh;
+        }
+        .page{
+            height: 50vh;
+            /*font-family: Arial;*/
+            font-size: 5vh;
+        }
+        .r{
+            background-color: red;
+            color: #660000;
+        }
+        .g{
+            background-color: green;
+            color: #660000;
+        }
+        .b{
+            background-color: blue;
+            color: #660000;
+        }
+        .y{
+            background-color: yellow;
+            color: #660000;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="acc" class="acc">
+   <p>Red Page</p>
+    <div class="page r">Red Page</div>
+    <p>Green Page</p>
+    <div class="page g">Green Page</div>
+    <p>Blue Page</p>
+    <div class="page b">Blue Page</div>
+    <p>Yellow Page</p>
+    <div class="page y">Yellow Page</div>
+</div>
+
+<script>
+    var options = {};
+    options.collapsible = true;
+    options.active= false;
+
+    $("#acc").accordion(options);
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <style>
+
+        .page {
+            height: 50vh;
+            /*font-family: Arial;*/
+            font-size: 5vh;
+        }
+
+        #red {
+            background-color: red;
+            color: #660000;
+        }
+
+        #green {
+            background-color: green;
+            color: #660000;
+        }
+
+        #blue {
+            background-color: blue;
+            color: #660000;
+        }
+
+        #yellow {
+            background-color: yellow;
+            color: #660000;
+        }
+    </style>
+</head>
+<body>
+<div id="tabs">
+    <ul>
+        <li><a href="#red"></a>Red</li>
+        <li><a href="#green"></a>Green</li>
+        <li><a href="#blue"></a>Blue</li>
+        <li><a href="#yellow"></a>Yellow</li>
+    </ul>
+    <div id="red" class="page r">Red Page</div>
+    <div id="green" class="page g">Green Page</div>
+    <div id="blue" class="page b">Blue Page</div>
+    <div id="yellow" class="page y">Yellow Page</div>
+</div>
+
+<script>
+    $("#tabs").tabs();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui.css"/>
+    <style>
+        .a{
+            top: 50px;
+            left: 50px;
+            position: absolute;
+
+            width: 150px;
+            height: 200px;
+            border: 1px solid black;
+            overflow: hidden;
+            background-color: #99ff99;
+        }
+    </style>
+</head>
+<body>
+
+<div id="first" class="a">
+    <p>texttexttexttexttexttexttexttexttexttext</p>
+    <p>texttexttexttexttexttexttexttexttexttext</p>
+    <p>texttexttexttexttexttexttexttexttexttext</p>
+    <p>texttexttexttexttexttexttexttexttexttext</p>
+    <p>texttexttexttexttexttexttexttexttexttext</p>
+    <p>texttexttexttexttexttexttexttexttexttext</p>
+    <p>texttexttexttexttexttexttexttexttexttext</p>
+</div>
+
+<script>
+    //$("#first").resizable();
+var options = {};
+    options.pieces = 55     ;
+  // options.distance = 150;
+    $("#first").on("click", function () {
+        $("#first").toggle("explode", options, 1500);
+    })
+
+</script>
+
+</body>
+</html>
