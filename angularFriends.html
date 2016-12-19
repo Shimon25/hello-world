@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+    <script src="angularFriends.js"></script>
+</head>
+<body>
+<div class="container" ng-app="friends" ng-controller="friendsCntr">
+    <table>
+        <tr>
+            <td ng-repeat="field in fields">{{field}}</td>
+        </tr>
+        <tr ng-repeat="field in friends">{{field}}>
+            <td ng-repeat="(k,v) in field">{{v}}</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
